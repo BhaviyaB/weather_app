@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: example-weather
+spec:
+  type: LoadBalancer
+  selector:
+    app: example-weather
+  ports: 
+    - protocol: TCP                                        
+      port: 6000
+      targetPort: 5000
+
+      
